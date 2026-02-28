@@ -6,9 +6,28 @@
 
 .header {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
     gap: 232.5px;
     padding: 21.84px 0px;
-    margin: 0 165px;
+
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.nav-menu {
+    display: none;
 }
 
 ul {
@@ -25,9 +44,10 @@ ul {
 .collections {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     gap: 30px;
     text-align: center;
-    margin: 0 165px;
+
 }
 
 .collection {
@@ -40,4 +60,51 @@ ul {
 
 .collections img {
     width: 100%;
+}
+
+@media screen and (min-width:0px) and (max-width:400px) {
+    .list {
+        display: none;
+    }
+
+    .icons {
+        display: none;
+    }
+
+    .nav-menu {
+        display: flex;
+    }
+
+    .collections {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+    .collection
+    {
+         width: 100%;
+    }
+
+}
+
+@media screen and (min-width:401px) and (max-width:700px) {
+   
+   .collections {
+        display: flex;
+        ;
+        
+        
+    }
+   
+    .collection {
+        width: calc( (100% - 30px) / 2);
+    }
+
+}
+
+@media screen and (min-width:701px) and (max-width:900px) {
+    .collection {
+        width: calc((100% - 60px) / 3);
+    }
 }
